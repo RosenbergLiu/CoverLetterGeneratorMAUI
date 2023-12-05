@@ -21,18 +21,16 @@
                 Spacing="40">
                 <Button
                     x:Name="CreateDocBtn"
-                    Text="Create a .docx Template File"
-                    BackgroundColor="DarkGoldenrod"
+                    Text="Create a .docx template file"
                     Clicked="CreateDocBtn_ClickedAsync"
-                    WidthRequest="315"
+                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
                     />
 
                 <Button
                     x:Name="PickFileBtn"
                     Text="Pick an existing .docx template file"
-                    BackgroundColor="DarkGoldenrod"
                     Clicked="PickFileBtn_Clicked"
-                    WidthRequest="315"
+                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
                     />
             </StackLayout>
 
@@ -54,8 +52,6 @@
                     HorizontalOptions="Start"
                     WidthRequest="500"
                     />
-
-
             </StackLayout>
 
             <StackLayout
@@ -98,20 +94,22 @@
 
             </StackLayout>
 
-
             
-
-            
-
-            <Button
-                x:Name="GenerateBtn"
-                Text="Generate Cover Letter"
-                Clicked="GenerateBtn_Clicked"
-                WidthRequest="670"
+            <StackLayout
+                HorizontalOptions="Center">
+                <Button
+                    x:Name="GenerateBtn"
+                    Text="Generate Cover Letter"
+                    Clicked="GenerateBtn_Clicked"
+                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
                 />
-            <Label
-                x:Name="OutputLabel"
-                Text=""/>
+                <Label
+                    x:Name="OutputLabel"
+                    Text=""
+                    HorizontalTextAlignment="Center"/>
+
+            </StackLayout>
+            
 
         </VerticalStackLayout>
     </ScrollView>
