@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoverLetterGeneratorMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            x:Name="MainLayout"
+            Padding="30,0"
+            Spacing="25"
+            >
+            <Label
+                Text="Cover Letter Generator"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" 
+                Margin="0,60,0,20"/>
+
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                Spacing="40">
+                <Button
+                    x:Name="CreateDocBtn"
+                    Text="Create a .docx Template File"
+                    BackgroundColor="DarkGoldenrod"
+                    Clicked="CreateDocBtn_ClickedAsync"
+                    WidthRequest="315"
+                    />
+
+                <Button
+                    x:Name="PickFileBtn"
+                    Text="Pick an existing .docx template file"
+                    BackgroundColor="DarkGoldenrod"
+                    Clicked="PickFileBtn_Clicked"
+                    WidthRequest="315"
+                    />
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                Spacing="20">
+                <Label
+                    x:Name="DocFilePath"
+                    Text="Template file path:"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="End"
+                    MinimumWidthRequest="150"
+                    />
+
+                <Entry
+                    x:Name="DocFileEntry"
+                    Placeholder="Template file not set yet"
+                    HorizontalOptions="Start"
+                    WidthRequest="500"
+                    />
+
+
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                Spacing="20">
+                <Label
+                    Text="Company name:"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="End"
+                    MinimumWidthRequest="150"
+                    />
+
+                <Entry
+                    x:Name="CompanyEntry"
+                    Placeholder="Enter the company name"
+                    HorizontalOptions="Start"
+                    WidthRequest="500"
+                    />
+
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                Spacing="20">
+                <Label
+                    Text="Position name:"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="End"
+                    MinimumWidthRequest="150"
+                    />
+
+                <Entry
+                    x:Name="PositionEntry"
+                    Placeholder="Enter the position name"
+                    HorizontalOptions="Start"
+                    WidthRequest="500"
+                    />
+
+            </StackLayout>
+
+
+            
+
+            
+
+            <Button
+                x:Name="GenerateBtn"
+                Text="Generate Cover Letter"
+                Clicked="GenerateBtn_Clicked"
+                WidthRequest="670"
+                />
+            <Label
+                x:Name="OutputLabel"
+                Text=""/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
